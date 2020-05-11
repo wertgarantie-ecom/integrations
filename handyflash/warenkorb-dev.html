@@ -24,6 +24,7 @@
     <meta name="application-name" content="Handyflash">
     <meta name="msapplication-tooltip" content="Handyflash">
     <meta name="apple-mobile-web-app-title" content="Handyflash">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wertgarantie-integrations@0/src/handyflash/wertgarantie-confirmation.css">
     <style data-savepage-href="/assets.php/a.css?v=15833296371&id=1f91208315e9f75dea40e1d75b545e08" type="text/css">/*!* Selectr 2.4.13
 * http://mobius.ovh/docs/selectr
 *
@@ -21108,8 +21109,8 @@
                                data-shop-product-name="iPhone SE"
                                data-device-price=86000
                                data-device-class="Smartphone"
-                               data-client-id="public:5209d6ea-1a6e-11ea-9f8d-778f0ad9137f"
-                               data-bifrost-uri="http://localhost:3000/wertgarantie">
+                               data-client-id="public:b9f303d0-74e1-11ea-b9e9-034d1bd36e8d"
+                               data-bifrost-uri="https://wertgarantie-bifrost-dev.herokuapp.com/wertgarantie/">
 </wertgarantie-selection-pop-up>
 <div class="tingle-modal layer-product-modal" style="display: none;">
     <button type="button" class="tingle-modal__close"><span class="tingle-modal__closeIcon"><svg viewBox="0 0 10 10"
@@ -22092,13 +22093,11 @@ inkl. 19% MwSt. 0,79 €
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
-                        <div class="accessories">
-                            <wertgarantie-confirmation
-                                    id="wg-confirmation"
-                                    data-client-id="public:5209d6ea-1a6e-11ea-9f8d-778f0ad9137f"
-                                    data-bifrost-uri="http://localhost:3000/wertgarantie">
+                            <wertgarantie-confirmation class="wertgarantie-confirmation"
+                                                       id="wg-confirmation"
+                                                       data-client-id="public:b9f303d0-74e1-11ea-b9e9-034d1bd36e8d"
+                                                       data-bifrost-uri="https://wertgarantie-bifrost-dev.herokuapp.com/wertgarantie/">
                             </wertgarantie-confirmation>
-                        </div>
                         <style data-savepage-href="/assets.php/a.css?f=%2Fportbl%2Fresponsive%2Flibs%2Ftiny-slider%2Ftiny-slider.css&v=15833296371&id=3adb7a35e1d3f9b54e81ab2594af0daf"
                                type="text/css">.tns-outer {
                             padding: 0 !important
@@ -25268,11 +25267,9 @@ body.cms_toolbar_open {
     <script language="JavaScript" type="text/javascript"></script>
 </div>
 </body>
-<script type="module" src="https://cdn.jsdelivr.net/npm/wertgarantie-rating@2/dist/rating.min.js"
+<script type="module" src="https://cdn.jsdelivr.net/npm/wertgarantie-selection-popup@2/dist/selection-popup.min.js"
         crossorigin="anonymous"></script>
-<script type="module" src="http://localhost:3334/packages/package-selection-popup/dist/selection-popup.min.js"
-        crossorigin="anonymous"></script>
-<script type="module" src="http://localhost:3334/packages/package-confirmation/dist/confirmation.min.js"
+<script type="module" src="https://cdn.jsdelivr.net/npm/wertgarantie-confirmation@2/dist/confirmation.min.js"
         crossorigin="anonymous"></script>
 <script>
     window.onload = function () {
