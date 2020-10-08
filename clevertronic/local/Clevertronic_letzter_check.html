@@ -40,8 +40,7 @@
     <link rel="preconnect" href="//connect.facebook.net">
     <link rel="preconnect" href="//www.dwin1.com">
     <script type=module>
-        import initInsuranceComponents
-            from 'http://localhost:3334/packages/package-loader/src/wertgarantieLoader.js';
+        import init from 'http://localhost:3334/packages/package-loader/src/wertgarantieLoader.js';
 
         const shopConfig = {
             stage: 'local',
@@ -73,7 +72,34 @@
                 },
             ]
         };
-        initInsuranceComponents(shopConfig);
+
+        const loaderConfig = [
+            {
+                "name": "selection-embedded-multi",
+                "target": {
+                    "pageSelector": ".*clevertronic.*",
+                    "parentElementSelector": ".b_end_article"
+                },
+                "sources": {
+                    "js": "https://cdn.jsdelivr.net/npm/wertgarantie-selection-embedded@0.0/dist/selection-embedded.min.js"
+                }
+            },
+            {
+                "name": "confirmation",
+                "target": {
+                    "validation": {
+                        "event": "click",
+                        "inputSelector": "#submit-button"
+                    },
+                    "pageSelector": ".*clevertronic.*",
+                    "parentElementSelector": "#interfacePlaceHolderSelector"
+                },
+                "sources": {
+                    "js": "https://cdn.jsdelivr.net/npm/wertgarantie-confirmation@2.0.37/dist/confirmation.min.js"
+                }
+            },
+        ];
+        init(shopConfig, loaderConfig);
     </script>
     <!-- stylesheets werden eingebunden -->
     <style data-savepage-href="/css/A.fonts.css,q08cde676b47530e665bb8b8b7fdb4c80fff61b9432a8b95b9bee8d0f830332d5.pagespeed.cf.dS_lRAmdGl.css"
@@ -16356,7 +16382,7 @@ Mit <b>Amazon Pay</b> können Sie die in Ihrem Amazon-Account hinterlegten Zahlu
                                 <div id="_wertgarantie-confirmation-placeholder">
                                 </div>
                                 <!-- START POPUP --><a href="#" id="_s-overlay" class="_s-overlay"
-                                                             onclick="return false;"></a>
+                                                       onclick="return false;"></a>
 
                                 <style>#_s-title-out {
                                     display: none;
