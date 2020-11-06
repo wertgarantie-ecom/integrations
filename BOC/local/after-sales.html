@@ -21,6 +21,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="cleartype" content="on">
 
+    <script type=module>
+        import initInsuranceComponents
+            from 'http://localhost:3334/packages/package-loader/src/wertgarantieLoader.js';
+
+        const shopConfig = {
+            stage: 'local',
+            id: "public:5a576bd2-1953-4d20-80de-4de00d65fdc7",
+            cartProducts: []
+        };
+
+        const loaderConfig = [
+            {
+                "name": "after-sales",
+                "target": {
+                    "testData": {
+                        "texts": {
+                            "success": {
+                                "title": "Länger Freude am Einkauf",
+                                "subtitle": "Folgende Geräte werden übermittelt",
+                                "nextSteps": [
+                                    "E-Mail-Postfach überprüfen",
+                                    "Mit wenigen Schritten absichern",
+                                    "Sofortige Hilfe erhalten, wenn es zählt"
+                                ],
+                                "contractNumber": "Auftragsnummer:",
+                                "nextStepsTitle": "Die nächsten Schritte"
+                            },
+                            "partnerShop": "testClient"
+                        },
+                        "successfulOrders": [
+                            {
+                                "insuranceProductTitle": "Fahrrad-Komplettschutz mit monatlicher Zahlweise",
+                                "productTitle": "SuperBike 3000",
+                                "contractNumber": "123234234",
+                                "productImageLink": "productImageLink",
+                                "backgroundStyle": "primary"
+                            }
+                        ]
+                    },
+                    "pageSelector": ".*",
+                    "parentElementSelector": "#wertgarantie-after-sales"
+                },
+                "sources": {
+                    "js": "http://localhost:3334/packages/package-after-sales/dist/after-sales.min.js"
+                }
+            }];
+        initInsuranceComponents(shopConfig, loaderConfig);
+    </script>
     <script type="text/javascript"></script>
     <title>B.O.C.</title>
     <meta name="google-site-verification" content="">
@@ -19512,6 +19560,9 @@ hinzugefügt:" href="/basket/">
                     <p>
                         <strong>Sie erhalten in Kürze eine Bestellbestätigung per E-Mail.</strong>
                     </p>
+
+                    <div id="wertgarantie-after-sales"></div>
+
                     <form id="formTShops" name="formTShops" method="post"
                           action="https://www.trustedshops.com/shop/protection.php" target="_blank">
                         <input name="_charset_" value="" type="hidden">
