@@ -18,6 +18,23 @@
     <script></script>
     <script></script>
     <script type="text/javascript"></script>
+
+    <script type=module>
+        import init
+            from 'https://cdn.jsdelivr.net/npm/wertgarantie-component-loader@1.0/dist/wertgarantieLoader.min.js';
+
+        const shopConfig = {
+            stage: 'staging',
+            id: "public:571277d9-aee8-4abd-89f5-b41fdf7264a4",
+            cartProducts: [{
+                sku: "ART-NR:217905-8",
+                name: "BERGAMONT GRANDURANCE RD 3, 28 ZOLL, ALU, SHIMANO CLARIS, 16-G",
+                deviceClasses: "Bike",
+                price: "96903"
+            }]
+        }
+        init(shopConfig);
+    </script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
@@ -19013,7 +19030,7 @@
                 </div>
             </div>
 
-           <div id="wertgarantie-confirmation"></div>
+            <div id="wertgarantie-confirmation"></div>
 
             <div class="well">
                 <div class="checkbox">
