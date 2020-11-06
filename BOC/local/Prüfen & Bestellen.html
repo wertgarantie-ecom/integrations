@@ -21,7 +21,38 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <script type=module>
+        import init from 'http://localhost:3334/packages/package-loader/src/wertgarantieLoader.js';
 
+        const shopConfig = {
+            stage: 'local',
+            id: "public:5a576bd2-1953-4d20-80de-4de00d65fdc7",
+            cartProducts: [{
+                sku: "ART-NR:217905-8",
+                name: "BERGAMONT GRANDURANCE RD 3, 28 ZOLL, ALU, SHIMANO CLARIS, 16-G",
+                deviceClasses: "Bike",
+                price: "96903"
+            }]
+        }
+
+        const loaderConfig = [
+            {
+                "name": "confirmation",
+                "target": {
+                    "validation": {
+                        "event": "click",
+                        "inputSelector": ".order-submit"
+                    },
+                    "pageSelector": ":*",
+                    "parentElementSelector": "#wertgarantie-confirmation"
+                },
+                "sources": {
+                    "js": "https://cdn.jsdelivr.net/npm/wertgarantie-confirmation@2.0.35/dist/confirmation.min.js"
+                }
+            },
+        ];
+        init(shopConfig, loaderConfig);
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="cleartype" content="on">
@@ -19013,7 +19044,7 @@
                 </div>
             </div>
 
-           <div id="wertgarantie-confirmation"></div>
+            <div id="wertgarantie-confirmation"></div>
 
             <div class="well">
                 <div class="checkbox">
